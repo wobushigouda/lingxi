@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.lingxi</groupId>
     <artifactId>isi</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>isi</name>
     <description>isi</description>
     <url/>
@@ -80,6 +80,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <image>
+                        <name>isi-app:${project.version}</name>
+                    </image>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
