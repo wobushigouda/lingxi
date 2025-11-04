@@ -12,6 +12,8 @@ export default {
   'menu.dashboard.test': '测试页',
   'menu.dashboard.monitor': '监控页',
   'menu.dashboard.workplace': '工作台',
+  'menu.interview': '面试页',
+  'menu.interview.room': '面试间',
   'menu.exception.403': '403',
   'menu.exception.404': '404',
   'menu.exception.500': '500',

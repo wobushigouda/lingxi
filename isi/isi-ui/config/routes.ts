@@ -73,6 +73,23 @@ export default [
     ],
   },
   {
+    path: '/interview',
+    name: 'interview',
+    icon: 'smile',
+    routes: [
+      {
+        path: '/interview',
+        redirect: '/interview/room',
+      },
+      {
+        name: 'room',
+        icon: 'smile',
+        path: '/interview/room',
+        component: './interview/room',
+      },
+    ],
+  },
+  {
     path: '/form',
     icon: 'form',
     name: 'form',
