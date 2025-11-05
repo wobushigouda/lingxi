@@ -9,13 +9,14 @@ const useStyles = createStyles(({ token }) => ({
     alignItems: 'center',
     backgroundColor: '#fff',
     padding: 0,
+    borderRadius: 12,
     width: '100%',
     height: '100%',
   },
   meetingRoom: {
     display: 'flex',
     flexDirection: 'column',
-    height: '100vh',
+    height: '100%',
     backgroundColor: '#f5f5f5',
     width: '100%',
   },
@@ -27,12 +28,12 @@ const useStyles = createStyles(({ token }) => ({
   // 面试屏幕
   videoItem: {
     maxWidth: '100%',
-    maxHeight: '80vh',
     border: '1px solid #ccc',
     backgroundColor: '#000',
     width: '100%',
     height: '100%',
     objectFit: 'cover',
+    borderRadius: 12,
     transform: 'scaleX(-1)',  // 添加这一行实现水平翻转
   },
   meetingControls: {

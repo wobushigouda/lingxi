@@ -30,11 +30,6 @@ const Screen: React.FC = () => {
 
   return (
     <div className={styles.meetingRoom}>
-      <header className={styles.meetingHeader}>
-        <h1>会议室</h1>
-        {/* 可以在这里添加更多的会议头部信息和按钮 */}
-      </header>
-
       <div className={styles.videoContainer}>
         <video ref={videoRef} autoPlay className={styles.videoItem} muted />
       </div>
