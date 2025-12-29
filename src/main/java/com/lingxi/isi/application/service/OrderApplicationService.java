@@ -9,7 +9,7 @@ import com.lingxi.isi.domain.model.aggregate.Order;
 import com.lingxi.isi.domain.model.aggregate.OrderStatus;
 import com.lingxi.isi.domain.model.event.OrderCreatedEvent;
 import com.lingxi.isi.domain.repository.OrderRepository;
-import com.lingxi.isi.domain.service.OrderDomainService;
+import com.lingxi.isi.infrastructure.adapter.OrderAdapter;
 import com.lingxi.isi.infrastructure.messaging.OrderEventPublisher;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -37,7 +37,7 @@ import java.time.format.DateTimeFormatter;
 public class OrderApplicationService {
    
     private final OrderRepository orderRepository;
-    private final OrderDomainService orderDomainService;
+    private final OrderAdapter orderAdapter;
     private final OrderMapper orderMapper;
     private final OrderEventPublisher orderEventPublisher;
 
@@ -64,7 +64,7 @@ public class OrderApplicationService {
         log.debug("生成订单号: {}", order.getOrderNumber());
 
         // 3. 业务规则校验
-        if (!orderDomainService.checkInventory(order)) {
+        if (!orderAdapter.checkInventory(order)) {
             throw new InsufficientInventoryException("商品库存不足");
         }
         log.debug("库存检查通过");
