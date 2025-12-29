@@ -1,1 +1,9 @@
-spring.application.name=isi
+spring:
+  application:
+    name: isi
+  datasource:
+    url: jdbc:mysql://localhost:3306/isi?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: lingyuncs1314521@
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
