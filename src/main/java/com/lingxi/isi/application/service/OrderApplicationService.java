@@ -22,7 +22,6 @@ import java.time.format.DateTimeFormatter;
 /**
  * 订单应用服务
  * 应用层核心服务，负责编排业务流程和协调各个领域组件
- * 
  * 职责：
  * - 接收命令和查询请求
  * - 调用领域服务执行业务逻辑
